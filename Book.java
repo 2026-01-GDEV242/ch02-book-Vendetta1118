@@ -14,18 +14,20 @@ class Book
     private String refNumber;
     private int pages;
     private int borrowed;
+    private boolean courseText;
 
     /**
-     * Set the author, title, pages, and refNumber fields when this object
+     * Set the author, title, pages, refNumber, and isCourseText fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean isCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         refNumber = ("");
         pages = bookPages;
         borrowed = 0;
+        courseText = isCourseText;
     }
 
     // Add the methods here ...
@@ -74,6 +76,15 @@ class Book
     }
     
     /**
+     * Returns the courseText field to the repective result
+     * Satisfies the requirement of problem 2.92
+     */
+    public boolean isCourseText()
+    {
+       return courseText;
+    }
+    
+    /**
      * Prints author to terminal
      * Satisfies the requirement of problem 2.84
      */
@@ -116,7 +127,7 @@ class Book
     
     /**
      * Prints deatils of the book entered to the terminal
-     * Satisfies the requirement of problem 2.87, 2.90, 2.91
+     * Satisfies the requirement of problems 2.87, 2.90, 2.91, 2.93
      */
     public void printDetails() 
     {
@@ -129,6 +140,6 @@ class Book
     else {
         System.out.println ("Reference Number: " + "ZZZ");
     }
-        System.out.println ("Books Borrowed: " + borrowed);
+        System.out.println ("Times Borrowed: " + borrowed);
 }
 }
