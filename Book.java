@@ -11,20 +11,22 @@ class Book
     // The fields.
     private String author;
     private String title;
+    private int pages;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle)
+    public Book(String bookAuthor, String bookTitle, int bookPages)
     {
         author = bookAuthor;
         title = bookTitle;
+        pages = bookPages;
     }
 
     // Add the methods here ...
     /**
-     * Returns the author fields to the repective result
+     * Returns the author field to the repective result
      * Satisfies the requirement of problem 2.83
      */
     public String getAuthor()
@@ -33,12 +35,21 @@ class Book
     }
     
     /**
-     * Returns the author fields to the repective result
+     * Returns the title field to the repective result
      * Satisfies the requirement of problem 2.83
      */
     public String getTitle()
     {
     return title;
+    }
+    
+    /**
+     * Returns the pages field to the respective result
+     * Satisfies the requirement of problem 2.85
+     */
+    public int getPages()
+    {
+        return pages;
     }
     
     /**
