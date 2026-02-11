@@ -69,4 +69,15 @@ class Book
     {
         System.out.println(title);
     }
+    
+    /**
+     * Prints deatils of the book entered to the terminal
+     * Satisfies the requirement of problem 2.87
+     */
+    public void printDetails() 
+    {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Pages: " + pages);
+    }
 }
