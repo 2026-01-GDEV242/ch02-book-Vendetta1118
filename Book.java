@@ -13,6 +13,7 @@ class Book
     private String title;
     private String refNumber;
     private int pages;
+    private int borrowed;
 
     /**
      * Set the author, title, pages, and refNumber fields when this object
@@ -24,6 +25,7 @@ class Book
         title = bookTitle;
         refNumber = ("");
         pages = bookPages;
+        borrowed = 0;
     }
 
     // Add the methods here ...
@@ -63,6 +65,15 @@ class Book
     }
     
     /**
+     * Returns the borrowed field to the repective result
+     * Satisfies the requirement of problem 2.91
+     */
+    public int getBorrowed() 
+    {
+        return borrowed;
+    }
+    
+    /**
      * Prints author to terminal
      * Satisfies the requirement of problem 2.84
      */
@@ -82,7 +93,7 @@ class Book
     
     /**
      * Assigns the value of the parameter to the refNumber field
-     * Satisfies the requirement of problem 2.88
+     * Satisfies the requirement of problem 2.88, 2.90
      */
     public void setRefNumber(String ref) 
     {
@@ -95,8 +106,17 @@ class Book
     }
     
     /**
+     * Updates the borrowed field by 1 everytime the method is called
+     * Satisfies the requirement of problem 2.91
+     */
+    public void borrow() 
+    {
+        borrowed++;
+    }
+    
+    /**
      * Prints deatils of the book entered to the terminal
-     * Satisfies the requirement of problem 2.87
+     * Satisfies the requirement of problem 2.87, 2.90, 2.91
      */
     public void printDetails() 
     {
@@ -109,5 +129,6 @@ class Book
     else {
         System.out.println ("Reference Number: " + "ZZZ");
     }
+        System.out.println ("Books Borrowed: " + borrowed);
 }
 }
