@@ -11,16 +11,18 @@ class Book
     // The fields.
     private String author;
     private String title;
+    private String refNumber;
     private int pages;
 
     /**
-     * Set the author and title fields when this object
+     * Set the author, title, pages, and refNumber fields when this object
      * is constructed.
      */
     public Book(String bookAuthor, String bookTitle, int bookPages)
     {
         author = bookAuthor;
         title = bookTitle;
+        refNumber = ("");
         pages = bookPages;
     }
 
@@ -40,7 +42,15 @@ class Book
      */
     public String getTitle()
     {
-    return title;
+        return title;
+    }
+    
+    /**
+     * Returns the refNumber field to the repective result
+     * Satisfies the requirement of problem 2.88
+     */
+    public String getRefNumber() {
+        return refNumber;
     }
     
     /**
@@ -68,6 +78,15 @@ class Book
     public void printTitle()
     {
         System.out.println(title);
+    }
+    
+    /**
+     * Assigns the value of the parameter to the refNumber field
+     * Satisfies the requirement of problem 2.88
+     */
+    public void setRefNumber(String ref) 
+    {
+     refNumber = ref;   
     }
     
     /**
